@@ -61,16 +61,13 @@ The complete automation flow is documented as **standard test cases** (including
 
 ---
 
-## Allure Report
-Allure Report is used to generate detailed automation execution reports including test status, steps, and summary.
-
-### Allure Report Screenshots
+## Allure Report (Screenshots)
 Below are screenshots from the Allure report generated after executing the automation suite.
 
-![Allure Report Summary](<img width="1917" height="870" alt="Allure Report" src="https://github.com/user-attachments/assets/9d66b538-997c-4f9d-a068-4e3d4e7e9277" />
-)
-![Allure Report Test Details](<img width="1690" height="879" alt="Behaviors" src="https://github.com/user-attachments/assets/22c59dc1-f276-4bda-b22f-258ba28b0cdf" />
-)
+[Allure Report Summary]<img width="1917" height="870" alt="Allure Report" src="https://github.com/user-attachments/assets/9d66b538-997c-4f9d-a068-4e3d4e7e9277" />
+
+[Allure Report Test Details]<img width="1690" height="879" alt="Behaviors" src="https://github.com/user-attachments/assets/22c59dc1-f276-4bda-b22f-258ba28b0cdf" />
+
 
 > 📌 Note: Allure generated folders (`allure-results`, `allure-report`) are excluded from GitHub using `.gitignore`.
 
