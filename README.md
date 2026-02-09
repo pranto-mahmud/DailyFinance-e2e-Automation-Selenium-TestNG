@@ -80,7 +80,8 @@ The demo video shows the **complete automation execution**, including:
 - Item creation and validation  
 - Profile update and login verification  
 - Admin login and user search  
-- Allure report generation  
+- CSV-based multiple user registration  
+- Exporting all users from the admin dashboard to a text file  
 
 🎥 **Automation Demo Video (Google Drive):**  
 👉 [AUTOMATED DEMO VIDEO_LINK_HERE](https://drive.google.com/file/d/17k_Ewxohxbtc5P1EG7pWr0eT7-O9ahgc/view?usp=sharing)
