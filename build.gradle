@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.40.0")
+    // Source: https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation("org.testng:testng:7.12.0")
+    // Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.21.0")
+    // Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    implementation("io.qameta.allure:allure-testng:2.32.0")
+    // Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
+    // Source: https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    implementation("com.github.javafaker:javafaker:1.0.2")
+    // Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation("io.rest-assured:rest-assured:6.0.0")
+    // Source: https://mvnrepository.com/artifact/commons-configuration/commons-configuration
+    implementation("commons-configuration:commons-configuration:1.10")
+
+}
+
+test{
+    useTestNG(){
+        if(project.hasProperty("email") && project.hasProperty("password")){
+            systemProperties.put("email",project.property("email"))
+            systemProperties.put("password",project.property("password"))
+            print(project.property("email"))
+            print(project.property("password"))
+        }
+        suites "./src/test/resources/regressionSuite.xml"
+    }
+}
